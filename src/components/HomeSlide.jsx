@@ -36,7 +36,7 @@ const HomeSlide = () => {
       pagination={{
         clickable: true,
       }}
-      className="rounded-md h-[70vh] bg-[#222]"
+      className="rounded-md bg-[#222]"
     >
       <SwiperSlide>
         <div className="relative w-full">
