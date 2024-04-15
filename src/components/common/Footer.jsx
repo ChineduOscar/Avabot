@@ -8,9 +8,9 @@ const Footer = () => {
    
 
   return (
-    <div className="bg-[#373737] px-16 py-6">
-        <div className="grid grid-cols-5 justify-between">
-            <div className="text-sm text-white flex flex-col gap-2">
+    <div className="bg-[#373737] px-2 md:px-16 py-4 md:py-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 justify-between gap-4">
+            <div className="text-xs md:text-sm text-white flex flex-col gap-2">
                 <p className="font-bold mb-2">ABOUT CHOLLO</p>
                 <p>Contact Us</p>  
                 <p>About Us</p>
@@ -19,13 +19,13 @@ const Footer = () => {
                 <p>Forum</p>
                 <p>Terms & Conditions</p>
             </div>
-            <div className="text-sm text-white flex flex-col gap-2">
+            <div className="text-xs md:text-sm text-white hidden md:flex flex-col gap-2">
                 <p className="font-bold mb-2">PAYMENT</p>
                 <p>Verve</p>  
                 <p>Visa</p>
                 <p>Mastercard</p>
             </div>
-            <div className="text-sm text-white flex flex-col gap-2">
+            <div className="text-xs md:text-sm text-white flex flex-col gap-2">
                 <p className="font-bold mb-2">BUYING ON CHOLLO</p>
                 <p>FAQs</p>  
                 <p>Delivery</p>
@@ -33,14 +33,14 @@ const Footer = () => {
                 <p>Bulk Purchase</p>
                 <p>Chollo Return Policy</p>
             </div>
-            <div className="text-sm text-white flex flex-col gap-2">
+            <div className="text-xs md:text-sm text-white flex flex-col gap-2">
                 <p className="font-bold mb-2">MORE INFO</p>
                 <p>Site Map</p>  
                 <p>Track My Order</p>
                 <p>Privacy Policy</p>
                 <p>Authentic Items Policy</p>
             </div>
-            <div className="text-sm text-white flex flex-col gap-2">
+            <div className="text-xs md:text-sm text-white flex flex-col gap-2">
                 <p className="font-bold mb-2">MAKE MONEY ON CHOLLO</p>
                 <p>Sell on Chollo</p>  
                 <p>Become a Sales Consultant</p>
@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="flex flex-col justify-end items-end my-2">
-            <p className="text-sm text-white font-bold">CONNECT WITH US</p>
+            <p className="text-xs md:text-sm text-white font-bold">CONNECT WITH US</p>
             <div className="flex items-center gap-2 mt-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="cursor-pointer" onMouseEnter={() => setFacebookHovered(true)} onMouseLeave={() => setFacebookHovered(false)}>
                     <circle cx="12" cy="12" r="12" fill={facebookHovered ? '#FF931E' : '#606060'}/>

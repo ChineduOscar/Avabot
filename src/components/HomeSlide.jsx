@@ -26,7 +26,7 @@ const HomeSlide = () => {
         "--swiper-pagination-color": "#FFFFFF",
         "--swiper-pagination-bullet-inactive-color": "#999999",
         "--swiper-pagination-bullet-inactive-opacity": "1",
-        "--swiper-pagination-bullet-size": "16px",
+        "--swiper-pagination-bullet-size": "10px",
         "--swiper-pagination-bullet-horizontal-gap": "2px"
       }}
       modules={[Navigation, Pagination, Scrollbar, Autoplay, A11y]}
@@ -37,7 +37,7 @@ const HomeSlide = () => {
       pagination={{
         clickable: true,
       }}
-      className="rounded-md bg-[#222] h-[70vh]"
+      className="rounded-md bg-[#222] h-[50vh] md:h-[70vh]"
     >
       <SwiperSlide>
         <div className="relative w-full h-full">

@@ -16,6 +16,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import MobileSearch from "./MobileSearch"
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -48,7 +49,7 @@ const Header = () => {
   return (
     <section>
       <header className="flex items-center justify-between gap-12 w-full px-2 md:px-6 lg:px-16 py-2  z-50 bg-[#373737]">
-        <div className="flex justify-center items-center gap-1 md:gap-8">
+        <div className="flex justify-center items-center gap-0 md:gap-8">
           <Button onClick={toggleDrawer(true)}>
             <MenuIcon />
           </Button>
@@ -73,9 +74,9 @@ const Header = () => {
             onClick={handleClick}
             className="flex justify-center items-center gap-2"
           >
+            <span className="hidden md:inline"><Dropdown /></span>
             <p className="hidden md:block font-bold text-white">Account</p>
             <UserIcon />
-            <span className="hidden md:inline"><Dropdown /></span>
           </Button>
           <Menu
             id="basic-menu"
@@ -105,12 +106,15 @@ const Header = () => {
             <Dropdown />
           </div>
           <div className="flex justify-center items-center gap-2 cursor-pointer">
-            <p className="hidden md:block font-bold">Cart</p>
             <img src={cartIcon} alt="help" />
+            <p className="hidden md:block font-bold">Cart</p>
           </div>
         </div>
       </header>
-      <div className="text-center text-sm md:text-base overflow-hidden bg-[#1E1E1E] p-2">
+      <div className='block md:hidden px-1'>
+        <MobileSearch />
+      </div>
+      <div className="hidden md:block text-center text-sm md:text-base overflow-hidden bg-[#1E1E1E] p-2">
         <p className="text-white text-sm scroll-text whitespace-nowrap">Welcome to <span className="text-[#FF931E] font-bold">Chollo!</span> We bring the market <span className="text-[#FF931E]">closer</span> to you...<span className="hidden md:inline">Enjoy <span className="text-[#FF931E]">FREE</span> shipping on a product per week</span></p>
       </div>
     </section>
