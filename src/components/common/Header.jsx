@@ -1,11 +1,11 @@
 import { useState } from "react"
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import MenuIcon from "../../assets/MenuIcon"
 import chollo from "../../assets/images/chollo.svg"
 import SearchIcon from "../../assets/SearchIcon"
 import UserIcon from "../../assets/UserIcon"
 import HelpIcon from "../../assets/HelpIcon"
-import cartIcon from "../../assets/icons/cart.svg"
+import CartIcon from "../../assets/CartIcon"
 import Dropdown from "../../assets/Dropdown"
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -56,10 +56,12 @@ const Header = () => {
           <Drawer open={sideBarOpen} onClose={toggleDrawer(false)}>
             {DrawerList}
           </Drawer>
-          <div className="flex justify-center items-center">
-            <img src={chollo} alt="chollo" className="w-[45px] h-[26px] md:w-[61px] md:h-[35px]"/>
-            <p className="text-white text-base md:text-[27px]">Chollo</p>
-          </div>
+          <Link to="/">
+            <div className="flex justify-center items-center">
+              <img src={chollo} alt="chollo" className="w-[45px] h-[26px] md:w-[61px] md:h-[35px]"/>
+              <p className="text-white text-base md:text-[27px]">Chollo</p>
+            </div>
+          </Link>
         </div>
         <div className="hidden md:flex items-center justify-center w-[40%]">
           <input className="text-[#67563F] text-sm bg-white rounded-l-md p-2 w-full outline-0" type="text" placeholder="Search products, brands & Categories..." />
@@ -74,9 +76,9 @@ const Header = () => {
             onClick={handleClick}
             className="flex justify-center items-center gap-2"
           >
-            <span className="hidden md:inline"><Dropdown /></span>
-            <p className="hidden md:block font-bold text-white">Account</p>
             <UserIcon />
+            <p className="hidden md:block font-bold text-white">Account</p>
+            <span className="hidden md:inline"><Dropdown /></span>
           </Button>
           <Menu
             id="basic-menu"
@@ -89,7 +91,9 @@ const Header = () => {
             
           >
             <MenuItem onClick={handleClose}>
-              <button className="bg-[#FF931E] rounded-md text-white px-4 py-2 text-sm md:text-base">SIGN IN</button>
+              <Link to="/login">
+                <button className="bg-[#FF931E] rounded-md text-white px-4 py-2 text-sm md:text-base">SIGN IN</button>
+              </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <p className="text-sm md:text-base">My Account</p>
@@ -101,12 +105,12 @@ const Header = () => {
             </MenuItem>
           </Menu>
           <div className="hidden md:flex justify-center items-center gap-2 cursor-pointer">
-            <p className="font-bold">Help</p>
             <HelpIcon />
+            <p className="font-bold">Help</p>
             <Dropdown />
           </div>
           <div className="flex justify-center items-center gap-2 cursor-pointer">
-            <img src={cartIcon} alt="help" />
+            <CartIcon />
             <p className="hidden md:block font-bold">Cart</p>
           </div>
         </div>

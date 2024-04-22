@@ -47,4 +47,11 @@
       transform: translateX(100%);
     }
   }
+  .bg-login{
+    width: 100%;
+    background: url("../src/assets/images/login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   
