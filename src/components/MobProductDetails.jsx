@@ -21,7 +21,7 @@ const MobProductDetails = () => {
         <div>
             <div className="text-[#373737] p-2">
                 {data?.map((item)=>(
-                    <div key={item?.id} className="cursor-pointer border-b-[1px] border-[#373737] pb-2 mb-2"  onClick={()=>changeContent(item?.id)}>
+                    <div key={item?.id} className="cursor-pointer border-b-[1px] pb-2 mb-2"  onClick={()=>changeContent(item?.id)}>
                         <div className="flex justify-between items-center">
                             <p  className="font-bold">{item?.title}</p>
                             <span className={item.id === itemId ? '-rotate-180 duration-200' : ''}><Dropdown color='black'/></span>

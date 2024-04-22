@@ -29,7 +29,7 @@ const ProductComponent = () => {
                         </div>
                         <ProductPreview />
                     </div>
-                    <div className="w-full md:w-1/2 rounded-md p-4 border border-[#E4E4E4] h-full md:h-[460px]">
+                    <div className="w-full md:w-1/2 rounded-md md:p-4 md:border border-[#E4E4E4] h-full md:h-[460px]">
                         <p className="text-xl md:text-2xl text-black">Apple iPhone 15 Pro 512GB Blue Titanium</p>
                         <p className="text-base text-black my-4"><span className="text-[#AEACAC]">Brand:</span> Apple</p>
                         <p className="font-bold text-2xl md:text-[27px]">₦ 150,000</p>

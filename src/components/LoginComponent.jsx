@@ -6,7 +6,7 @@ import BackArrow from "../assets/BackArrow"
 const LoginComponent = () => {
     const navigate = useNavigate()
   return (
-    <div className='bg-login px-2 md:px-8 py-4 h-full'>
+    <div className='bg-login px-2 md:px-8 py-4 h-screen md:h-full'>
         <div className='cursor-pointer' onClick={()=>navigate(-1)}>
             <BackArrow />
         </div>
